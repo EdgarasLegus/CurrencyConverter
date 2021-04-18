@@ -1,11 +1,9 @@
-﻿using CurrencyConverter.Data;
-using CurrencyConverter.Domain.Entities;
+﻿using CurrencyConverter.Domain.Entities;
 using CurrencyConverter.Interfaces.Repository;
 using CurrencyConverter.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace CurrencyConverter.BusinessLogic.Services
 {

@@ -17,17 +17,11 @@ namespace CurrencyConverter.BusinessLogic.ServiceTests
     {
         private IRepository _repositoryMock;
         private IExchangeService _exchangeService;
-        //private IOptions<Config> _optionsMock;
-        //private IFileReader _fileReaderMock;
 
         [SetUp]
         public void Setup()
         {
-            //_optionsMock = Substitute.For<IOptions<Config>>();
-            //_fileReaderMock = Substitute.For<IFileReader>();
             _repositoryMock = Substitute.For<IRepository>();
-
-
             _exchangeService = new ExchangeService(_repositoryMock);
         }
 
@@ -41,13 +35,6 @@ namespace CurrencyConverter.BusinessLogic.ServiceTests
                 MainCurrency = "NOK",
                 MoneyCurrency = "NOK",
                 Amount = 400
-            };
-
-            var testPartsList = new List<List<string>>()
-            {
-                new List<string>(){ "1", "EUR", "DKK", "7.4357"},
-                new List<string>(){ "2", "USD", "GBP", "0.7293"},
-                new List<string>(){ "3", "NOK", "JPY", "12.8900"}
             };
 
             var testExchangeRatesList = new List<ExchangeRate>()

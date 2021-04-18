@@ -46,7 +46,8 @@ namespace CurrencyConverter.Data.Repository
         private bool IsDuplicate(List<ExchangeRate> exchangeRatesList, ExchangeRate exchangeRate)
         {
             return exchangeRatesList.Any(x => x.MainCurrency == exchangeRate.MainCurrency &&
-            x.MoneyCurrency == exchangeRate.MoneyCurrency);
+            x.MoneyCurrency == exchangeRate.MoneyCurrency) || exchangeRatesList.Any(x => x.MainCurrency == exchangeRate.MoneyCurrency &&
+            x.MoneyCurrency == exchangeRate.MainCurrency);
         }
     }
 }
